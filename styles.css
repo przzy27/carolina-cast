@@ -574,3 +574,298 @@ footer .tagline {
 .btn-submit:hover {
   background-color: #4a86a8;
 }
+
+
+
+/* ================================
+   Responsive / Mobile Styles
+   Carolina Cast
+   Author: Patrick Rzepka
+   ================================ */
+
+/* Prevent accidental horizontal scrolling */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make all images scale properly */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+  }
+
+  .nav-logo-box {
+    margin-bottom: 8px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
+  }
+
+  .nav-links li {
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .btn-nav {
+    padding: 10px 16px;
+    border-radius: 999px;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero-text {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .featured-section,
+  .seasonal-section,
+  .spots-section,
+  .lure-cards-section,
+  .about-values-section,
+  .about-mission-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .card-grid,
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .mission-block {
+    flex-direction: column;
+  }
+
+  .mission-photo,
+  .mission-text-box {
+    width: 100%;
+  }
+
+  .contact-form-wrap {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Phone screens */
+@media (max-width: 600px) {
+  nav {
+    padding: 14px 12px;
+  }
+
+  .nav-logo-box {
+    width: 150px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+
+  .btn-nav {
+    width: auto;
+    min-width: 160px;
+  }
+
+  .hero {
+    min-height: 480px;
+  }
+
+  .hero-img {
+    height: 480px;
+    object-fit: cover;
+  }
+
+  .hero-text {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .section-title,
+  .spots-header h1,
+  .lure-header h1,
+  .about-header h1,
+  .contact-header h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .section-subtitle,
+  .spots-header p,
+  .lure-header p,
+  .about-header p,
+  .contact-header p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .featured-section,
+  .seasonal-section,
+  .spots-section,
+  .lure-cards-section,
+  .about-values-section,
+  .about-mission-section {
+    padding: 36px 18px;
+  }
+
+  .card-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .card,
+  .value-card {
+    width: 100%;
+  }
+
+  .card-photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .search-bar,
+  .search-wrap {
+    width: 100%;
+  }
+
+  .search-wrap input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .filter-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .filter-btn {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px;
+  }
+
+  .mission-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mission-text-box {
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .mission-text-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-form-wrap {
+    width: 92%;
+    padding: 28px 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .btn-submit,
+  .btn-card {
+    min-height: 44px;
+    padding: 12px 18px;
+    font-size: 1rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 18px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .section-title,
+  .spots-header h1,
+  .lure-header h1,
+  .about-header h1,
+  .contact-header h1 {
+    font-size: 1.7rem;
+  }
+}

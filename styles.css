@@ -2026,3 +2026,75 @@ footer .tagline {
     width: auto !important;
   }
 }
+/* ================================
+   Logo Readability Fix
+   Keeps logo visible without oversized white box
+   ================================ */
+
+.nav-logo-box {
+  background-color: #ffffff !important;
+  border: 2px solid #6f8fc7 !important;
+  border-radius: 10px !important;
+  width: 185px !important;
+  height: 70px !important;
+  padding: 4px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+
+.nav-logo-box img {
+  height: 58px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  transform: scale(1.45);
+  transform-origin: center;
+}
+
+.footer-logo-box {
+  background-color: #ffffff !important;
+  border-radius: 10px !important;
+  width: 170px !important;
+  height: 64px !important;
+  padding: 4px 12px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.footer-logo-box img {
+  height: 54px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  transform: scale(1.35);
+  transform-origin: center;
+}
+
+/* Mobile logo sizing */
+@media screen and (max-width: 600px) {
+  .nav-logo-box {
+    width: 230px !important;
+    height: 90px !important;
+    margin: 0 auto 18px !important;
+    border-radius: 12px !important;
+  }
+
+  .nav-logo-box img {
+    height: 72px !important;
+    width: auto !important;
+    transform: scale(1.55);
+  }
+
+  .footer-logo-box {
+    width: 210px !important;
+    height: 80px !important;
+  }
+
+  .footer-logo-box img {
+    height: 64px !important;
+    transform: scale(1.45);
+  }
+}

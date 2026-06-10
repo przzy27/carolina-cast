@@ -1944,3 +1944,42 @@ footer .tagline {
     font-size: 0.9rem;
   }
 }
+/* ================================
+   Bigger Mobile Logo Fix
+   ================================ */
+
+@media screen and (max-width: 600px) {
+  .nav-logo-box {
+    width: 230px !important;
+    height: 95px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  .nav-logo-box img {
+    height: 72px !important;
+    width: auto !important;
+    transform: scale(2.2);
+    transform-origin: center;
+  }
+
+  .footer-logo-box {
+    width: 210px !important;
+    height: 85px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  .footer-logo-box img {
+    height: 65px !important;
+    width: auto !important;
+    transform: scale(2.1);
+    transform-origin: center;
+  }
+}

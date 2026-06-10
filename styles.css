@@ -1983,3 +1983,46 @@ footer .tagline {
     transform-origin: center;
   }
 }
+/* ================================
+   Logo White Box Fix
+   ================================ */
+
+.nav-logo-box,
+.footer-logo-box {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.nav-logo-box img {
+  height: 58px !important;
+  width: auto !important;
+  object-fit: contain;
+}
+
+.footer-logo-box img {
+  height: 58px !important;
+  width: auto !important;
+  object-fit: contain;
+}
+
+/* Mobile logo size */
+@media screen and (max-width: 600px) {
+  .nav-logo-box {
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 14px;
+  }
+
+  .nav-logo-box img {
+    height: 80px !important;
+    width: auto !important;
+  }
+
+  .footer-logo-box img {
+    height: 70px !important;
+    width: auto !important;
+  }
+}

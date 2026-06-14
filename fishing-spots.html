@@ -6,38 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fishing Spots - Carolina Cast</title>
 
-  <!-- EXTERNAL CSS -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- INTERNAL CSS -->
   <style>
-    .spots-header {
-      background-color: #f0f2f5;
-      padding: 50px 60px 30px;
-      text-align: center;
-    }
-
-    .spots-header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #1a2a4a;
-      margin-bottom: 10px;
-    }
-
-    .spots-header p {
-      font-size: 0.92rem;
-      color: #555;
-    }
-
     .spots-section {
       background-color: #f0f2f5;
       padding: 10px 60px 60px;
     }
 
     .card-body .card-meta {
-      font-size: 0.78rem;
+      font-size: 0.9rem;
       color: #666;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
   </style>
 </head>
@@ -48,6 +28,7 @@
     <div class="nav-logo-box">
       <img src="images/Carolina_Cast.png" alt="Carolina Cast Logo">
     </div>
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="fishing-spots.html" class="active">Fishing Spots</a></li>
@@ -61,43 +42,91 @@
   <!-- HEADER -->
   <div class="spots-header">
     <h1>Fishing Spots</h1>
-    <p>Explore local fishing locations across the Carolinas with tips on species, seasons, and conditions.</p>
+    <p>
+      Explore local fishing locations across the Carolinas with tips on species,
+      seasons, conditions, and beginner-friendly options.
+    </p>
   </div>
 
-  <!-- SPOTS -->
+  <!-- SPOTS CARDS -->
   <section class="spots-section">
     <div class="card-grid">
 
       <div class="card">
-        <img class="card-photo" src="images/spot1.jpg" alt="Cane Creek Park">
+        <img class="card-photo" src="images/spot1.jpg" alt="Cane Creek Park fishing area">
         <div class="card-body">
           <h3>Cane Creek Park</h3>
-          <p class="card-meta">Best Season: Spring–Fall</p>
+          <p class="card-meta">Best Season: Spring-Fall</p>
           <p>A peaceful local spot with bass, bluegill, and catfish opportunities. Great for families and beginners.</p>
-          <a href="fishing-spots.html" class="btn-card">View Details</a>
+          <a href="#cane-creek-details" class="btn-card">View Details</a>
         </div>
       </div>
 
       <div class="card">
-        <img class="card-photo" src="images/spot2.jpg" alt="Lake Wylie">
+        <img class="card-photo" src="images/spot2.jpg" alt="Lake Wylie fishing location">
         <div class="card-body">
           <h3>Lake Wylie</h3>
           <p class="card-meta">Best Season: Year-round</p>
-          <p>A large reservoir with reliable fishing. Striped bass and crappie are common catches.</p>
-          <a href="fishing-spots.html" class="btn-card">View Details</a>
+          <p>A large reservoir with reliable fishing. Bass, crappie, and catfish are common catches.</p>
+          <a href="#lake-wylie-details" class="btn-card">View Details</a>
         </div>
       </div>
 
       <div class="card">
-        <img class="card-photo" src="images/spot3.jpg" alt="Waxhaw Community Pond">
+        <img class="card-photo" src="images/spot3.jpg" alt="Waxhaw Community Pond fishing spot">
         <div class="card-body">
           <h3>Waxhaw Community Pond</h3>
-          <p class="card-meta">Best Season: Spring–Summer</p>
-          <p>A calm, stocked community pond ideal for catch-and-release and beginner anglers.</p>
-          <a href="fishing-spots.html" class="btn-card">View Details</a>
+          <p class="card-meta">Best Season: Spring-Summer</p>
+          <p>A calm community pond ideal for catch-and-release, quick trips, and beginner anglers.</p>
+          <a href="#waxhaw-pond-details" class="btn-card">View Details</a>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- FISHING SPOT DETAILS -->
+  <section class="spot-details-section">
+    <h2 class="section-title">Fishing Spot Details</h2>
+    <p class="section-subtitle">
+      Learn more about each location, including fish species, difficulty level,
+      and planning tips.
+    </p>
+
+    <div id="cane-creek-details" class="detail-card">
+      <h3>Cane Creek Park</h3>
+      <p><strong>Best For:</strong> Bass, bluegill, and catfish</p>
+      <p><strong>Difficulty:</strong> Beginner-friendly</p>
+      <p><strong>Best Season:</strong> Spring through fall</p>
+      <p>
+        Cane Creek Park is a peaceful local fishing location that works well for
+        families, beginners, and casual anglers. It offers shoreline access and
+        a calm outdoor setting for relaxed fishing trips.
+      </p>
+    </div>
+
+    <div id="lake-wylie-details" class="detail-card">
+      <h3>Lake Wylie</h3>
+      <p><strong>Best For:</strong> Bass, crappie, and catfish</p>
+      <p><strong>Difficulty:</strong> Intermediate</p>
+      <p><strong>Best Season:</strong> Year-round</p>
+      <p>
+        Lake Wylie is a larger reservoir with more room for boat fishing and
+        deeper water structure. It is a strong option for anglers looking for
+        more variety and a bigger fishing experience.
+      </p>
+    </div>
+
+    <div id="waxhaw-pond-details" class="detail-card">
+      <h3>Waxhaw Community Pond</h3>
+      <p><strong>Best For:</strong> Bluegill and small bass</p>
+      <p><strong>Difficulty:</strong> Beginner-friendly</p>
+      <p><strong>Best Season:</strong> Spring and summer</p>
+      <p>
+        Waxhaw Community Pond is a simple local fishing option for quick trips.
+        It is ideal for beginners, families, or anyone who wants an easy
+        catch-and-release fishing experience.
+      </p>
     </div>
   </section>
 
@@ -106,7 +135,9 @@
     <div class="footer-logo-box">
       <img src="images/Carolina_Cast.png" alt="Carolina Cast Logo">
     </div>
+
     <p class="tagline">Helping anglers find better fishing spots across the Carolinas.</p>
+
     <ul class="footer-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="fishing-spots.html">Fishing Spots</a></li>
@@ -114,6 +145,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+
     <p class="footer-copy">© 2026 Carolina Cast. All rights reserved.</p>
   </footer>
 

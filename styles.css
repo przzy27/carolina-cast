@@ -115,7 +115,7 @@ nav {
   background-color: #4a86a8;
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Home Hero ---------- */
 .hero {
   position: relative;
   height: 430px;
@@ -200,7 +200,16 @@ nav {
   max-width: 760px;
 }
 
-/* ---------- Cards ---------- */
+.eyebrow {
+  color: #9fd0f0;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* ---------- Basic Cards ---------- */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -264,135 +273,434 @@ nav {
   font-weight: 700;
   border: none;
   cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .btn-card:hover {
   background-color: #4a86a8;
+  transform: translateY(-1px);
 }
 
-/* ---------- Fishing Spots Page ---------- */
-.spots-header {
-  background-color: #f0f2f5;
-  padding: 64px 60px 34px;
-  text-align: center;
-}
-
-.spots-header h1 {
-  font-size: clamp(2rem, 4vw, 2.7rem);
-  font-weight: 800;
-  color: #1a2a4a;
-  margin-bottom: 12px;
-}
-
-.spots-header p {
-  font-size: 1rem;
-  color: #555;
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.spot-details-section {
-  background-color: #ffffff;
-  padding: 55px 60px;
-}
-
-.detail-card {
-  max-width: 850px;
-  margin: 24px auto;
-  background-color: #f0f2f5;
-  border-radius: 14px;
-  padding: 28px 34px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  scroll-margin-top: 100px;
-}
-
-.detail-card h3 {
-  color: #1a2a4a;
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-}
-
-.detail-card p {
-  color: #444;
-  font-size: 1rem;
-  margin-bottom: 8px;
-  line-height: 1.6;
-}
-
-/* ---------- Lure Guide Page ---------- */
-.lure-header {
-  background-color: #f0f2f5;
-  padding: 64px 60px 34px;
-  text-align: center;
-}
-
-.lure-header h1 {
-  font-size: clamp(2rem, 4vw, 2.7rem);
-  font-weight: 800;
-  color: #1a2a4a;
-  margin-bottom: 10px;
-}
-
-.lure-header p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 28px;
-}
-
-.search-bar {
+/* ---------- Fishing Spots Main Page ---------- */
+.spots-page-hero {
+  position: relative;
+  min-height: 420px;
+  background:
+    linear-gradient(rgba(10, 25, 47, 0.3), rgba(10, 25, 47, 0.62)),
+    url("images/spot2.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  color: #ffffff;
+}
+
+.spots-page-content {
+  max-width: 820px;
+  position: relative;
+  z-index: 2;
+}
+
+.spots-page-content h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.08;
+  font-weight: 900;
   margin-bottom: 18px;
 }
 
-.search-wrap {
+.spots-page-content p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #edf6ff;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.spots-feature-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
+  padding: 65px 60px 75px;
+}
+
+.spot-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.spot-showcase-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.12);
+  border: 1px solid rgba(91, 155, 191, 0.18);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.spot-showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(20, 35, 65, 0.16);
+}
+
+.spot-showcase-img {
   position: relative;
-  display: inline-block;
-  width: min(100%, 420px);
+  height: 230px;
+  overflow: hidden;
 }
 
-.search-bar input {
+.spot-showcase-img img {
   width: 100%;
-  padding: 12px 18px 12px 44px;
-  border: 1px solid #d0d8e4;
-  border-radius: 9px;
-  font-size: 0.95rem;
-  background-color: #ffffff;
-  color: #333;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
 }
 
-.search-icon {
+.spot-showcase-card:hover .spot-showcase-img img {
+  transform: scale(1.05);
+}
+
+.spot-tag {
   position: absolute;
+  top: 14px;
   left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  opacity: 0.55;
-}
-
-.filter-btns {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 36px;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  background-color: #5b9bbf;
+  background: rgba(30, 45, 79, 0.92);
   color: #ffffff;
-  border: none;
-  padding: 10px 22px;
-  min-height: 44px;
-  border-radius: 7px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 7px 12px;
+  border-radius: 999px;
 }
 
-.filter-btn:hover {
-  background-color: #4a86a8;
+.spot-showcase-body {
+  padding: 24px 22px 26px;
+  text-align: center;
+}
+
+.spot-showcase-body h3 {
+  color: #1a2a4a;
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.spot-showcase-body p {
+  color: #56616d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.spot-quick-info,
+.lure-quick-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.spot-quick-info span,
+.lure-quick-info span {
+  background: #eef6fb;
+  color: #1e3a5f;
+  border: 1px solid #d5e8f3;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* ---------- Fishing Spot Detail Pages ---------- */
+.spot-detail-hero,
+.lure-detail-hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+.spot-detail-hero img,
+.lure-detail-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spot-detail-overlay,
+.lure-detail-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(10, 25, 47, 0.72), rgba(10, 25, 47, 0.22)),
+    linear-gradient(to top, rgba(10, 25, 47, 0.55), transparent);
+}
+
+.spot-detail-hero-text,
+.lure-detail-hero-text {
+  position: absolute;
+  left: 8%;
+  bottom: 70px;
+  color: #ffffff;
+  max-width: 720px;
+}
+
+.spot-detail-hero-text h1,
+.lure-detail-hero-text h1 {
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 1.05;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.spot-detail-hero-text p,
+.lure-detail-hero-text p {
+  font-size: 1.1rem;
+  color: #edf6ff;
+  line-height: 1.7;
+}
+
+.spot-detail-page,
+.lure-detail-page {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
+  padding: 42px 60px 75px;
+}
+
+.back-to-spots {
+  display: inline-flex;
+  align-items: center;
+  color: #1e3a5f;
+  font-weight: 900;
+  margin-bottom: 28px;
+  transition: color 0.2s;
+}
+
+.back-to-spots:hover {
+  color: #5b9bbf;
+}
+
+.detail-page-layout {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  display: grid;
+  grid-template-columns: 1.8fr 0.9fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.detail-main-card,
+.detail-sidebar,
+.detail-info-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.1);
+  border: 1px solid rgba(91, 155, 191, 0.16);
+}
+
+.detail-main-card {
+  padding: 36px 38px;
+}
+
+.detail-main-card h2 {
+  color: #1a2a4a;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.detail-main-card p {
+  color: #4f5b66;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+.tip-box {
+  background: #eef6fb;
+  border-left: 5px solid #5b9bbf;
+  border-radius: 12px;
+  padding: 16px 18px;
+  color: #34495e;
+  line-height: 1.65;
+  margin-top: 20px;
+}
+
+.detail-sidebar {
+  padding: 28px 24px;
+}
+
+.detail-sidebar h3 {
+  color: #1a2a4a;
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.fact-row {
+  border-top: 1px solid #e0ebf2;
+  padding: 15px 0;
+}
+
+.fact-row:first-of-type {
+  border-top: none;
+}
+
+.fact-row span {
+  display: block;
+  color: #6b7785;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+
+.fact-row strong {
+  color: #1e3a5f;
+  font-size: 0.98rem;
+}
+
+.detail-info-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.detail-info-card {
+  padding: 26px 24px;
+}
+
+.detail-info-card h3 {
+  color: #1a2a4a;
+  font-size: 1.15rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.detail-info-card p {
+  color: #596675;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ---------- Lure Guide Main Page ---------- */
+.lure-page-hero {
+  position: relative;
+  min-height: 430px;
+  background:
+    linear-gradient(rgba(10, 25, 47, 0.35), rgba(10, 25, 47, 0.7)),
+    url("images/bass.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  color: #ffffff;
+}
+
+.lure-page-content {
+  max-width: 820px;
+  position: relative;
+  z-index: 2;
+}
+
+.lure-page-content h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.08;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.lure-page-content p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #edf6ff;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.lure-feature-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
+  padding: 65px 60px 75px;
+}
+
+.lure-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.lure-showcase-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.12);
+  border: 1px solid rgba(91, 155, 191, 0.18);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.lure-showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(20, 35, 65, 0.16);
+}
+
+.lure-showcase-img {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  display: block;
+  background: none;
+}
+
+.lure-showcase-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.lure-showcase-card:hover .lure-showcase-img img {
+  transform: scale(1.05);
+}
+
+.lure-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(30, 45, 79, 0.92);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 7px 12px;
+  border-radius: 999px;
+}
+
+.lure-showcase-body {
+  padding: 24px 22px 26px;
+  text-align: center;
+}
+
+.lure-showcase-body h3 {
+  color: #1a2a4a;
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.lure-showcase-body p {
+  color: #56616d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
 }
 
 /* ---------- About Page ---------- */
@@ -415,6 +723,11 @@ nav {
   max-width: 680px;
   margin: 0 auto;
   line-height: 1.7;
+}
+
+.about-mission-section,
+.about-values-section {
+  padding: 55px 60px;
 }
 
 .mission-block {
@@ -658,6 +971,22 @@ footer .tagline {
   }
 }
 
+@media screen and (max-width: 950px) {
+  .spot-showcase-grid,
+  .lure-showcase-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+
+  .detail-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media screen and (max-width: 760px) {
   nav {
     position: static;
@@ -736,15 +1065,12 @@ footer .tagline {
   .spots-section,
   .lure-cards-section,
   .about-values-section,
-  .about-mission-section,
-  .spot-details-section {
+  .about-mission-section {
     padding-left: 22px !important;
     padding-right: 22px !important;
   }
 
   .about-header,
-  .spots-header,
-  .lure-header,
   .contact-header {
     padding-left: 22px !important;
     padding-right: 22px !important;
@@ -782,6 +1108,80 @@ footer .tagline {
   .form-group input,
   .form-group textarea {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .spots-page-hero,
+  .lure-page-hero {
+    min-height: 420px;
+    padding: 70px 18px;
+  }
+
+  .spots-page-content h1,
+  .lure-page-content h1 {
+    font-size: 2.15rem;
+  }
+
+  .spots-page-content p,
+  .lure-page-content p {
+    font-size: 0.98rem;
+  }
+
+  .spots-feature-section,
+  .lure-feature-section {
+    padding: 50px 16px 58px;
+  }
+
+  .spot-showcase-img,
+  .lure-showcase-img {
+    height: 220px;
+  }
+
+  .spot-detail-hero,
+  .lure-detail-hero {
+    height: 460px;
+  }
+
+  .spot-detail-overlay,
+  .lure-detail-overlay {
+    background: rgba(10, 25, 47, 0.62);
+  }
+
+  .spot-detail-hero-text,
+  .lure-detail-hero-text {
+    left: 7%;
+    right: 7%;
+    bottom: 48px;
+    max-width: none;
+    text-align: center;
+  }
+
+  .spot-detail-hero-text h1,
+  .lure-detail-hero-text h1 {
+    font-size: 2.35rem;
+  }
+
+  .spot-detail-hero-text p,
+  .lure-detail-hero-text p {
+    font-size: 0.98rem;
+  }
+
+  .spot-detail-page,
+  .lure-detail-page {
+    padding: 34px 16px 56px;
+  }
+
+  .detail-main-card {
+    padding: 28px 22px;
+  }
+
+  .detail-main-card h2 {
+    font-size: 1.65rem;
+  }
+
+  .detail-sidebar {
+    padding: 24px 20px;
   }
 }
 
@@ -825,21 +1225,16 @@ footer .tagline {
   .spots-section,
   .lure-cards-section,
   .about-values-section,
-  .about-mission-section,
-  .spot-details-section {
+  .about-mission-section {
     padding: 34px 16px !important;
   }
 
   .about-header,
-  .spots-header,
-  .lure-header,
   .contact-header {
     padding: 42px 16px 24px !important;
   }
 
   .section-title,
-  .spots-header h1,
-  .lure-header h1,
   .about-header h1,
   .contact-header h1 {
     font-size: 1.85rem;
@@ -847,8 +1242,6 @@ footer .tagline {
   }
 
   .section-subtitle,
-  .spots-header p,
-  .lure-header p,
   .about-header p,
   .contact-header p {
     font-size: 0.98rem;
@@ -856,10 +1249,6 @@ footer .tagline {
 
   .card-photo {
     height: 200px;
-  }
-
-  .detail-card {
-    padding: 24px 20px;
   }
 
   .footer-links {
@@ -871,1718 +1260,19 @@ footer .tagline {
     content: none;
   }
 }
-/* =============================================
-   Polished Fishing Spots Page
-   Author: Patrick Rzepka
-   ============================================= */
-
-.spots-hero {
-  position: relative;
-  min-height: 420px;
-  background:
-    linear-gradient(rgba(10, 25, 47, 0.25), rgba(10, 25, 47, 0.55)),
-    url("images/spot2.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 24px;
-  color: #ffffff;
-}
-
-.spots-hero-content {
-  max-width: 820px;
-  position: relative;
-  z-index: 2;
-}
-
-.eyebrow {
-  color: #9fd0f0;
-  text-transform: uppercase;
-  letter-spacing: 1.8px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.spots-hero h1 {
-  font-size: clamp(2.3rem, 5vw, 4rem);
-  line-height: 1.08;
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.spots-hero p {
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: #edf6ff;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.spots-intro {
-  max-width: 950px;
-  margin: -48px auto 0;
-  position: relative;
-  z-index: 5;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  padding: 0 24px;
-}
-
-.intro-stat {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 24px 18px;
-  text-align: center;
-  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.14);
-  border: 1px solid rgba(91, 155, 191, 0.18);
-}
-
-.intro-stat span {
-  display: block;
-  color: #1e3a5f;
-  font-size: 1.55rem;
-  font-weight: 900;
-  margin-bottom: 4px;
-}
-
-.intro-stat p {
-  color: #5d6b7a;
-  font-size: 0.92rem;
-  font-weight: 700;
-}
-
-.polished-spots {
-  padding-top: 70px !important;
-}
-
-.spot-card {
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-
-.spot-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(20, 35, 65, 0.15);
-}
-
-.spot-image-wrap {
-  position: relative;
-  overflow: hidden;
-}
-
-.spot-image-wrap .card-photo {
-  height: 210px;
-  transition: transform 0.3s ease;
-}
-
-.spot-card:hover .card-photo {
-  transform: scale(1.04);
-}
-
-.spot-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(30, 45, 79, 0.92);
-  color: #ffffff;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 7px 12px;
-  border-radius: 999px;
-  backdrop-filter: blur(4px);
-}
-
-.mini-info {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 4px 0 18px;
-}
-
-.mini-info span {
-  background: #eef6fb;
-  color: #1e3a5f;
-  border: 1px solid #d5e8f3;
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-.spot-details-section {
-  background:
-    linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
-  padding: 70px 60px;
-}
-
-.details-heading {
-  max-width: 760px;
-  margin: 0 auto 40px;
-  text-align: center;
-}
-
-.details-heading h2 {
-  color: #1a2a4a;
-  font-size: clamp(2rem, 4vw, 2.7rem);
-  font-weight: 900;
-  margin-bottom: 12px;
-}
-
-.details-heading p {
-  color: #555;
-  line-height: 1.7;
-}
-
-.enhanced-detail {
-  max-width: 1050px;
-  margin: 32px auto;
-  background: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 38% 62%;
-  box-shadow: 0 14px 35px rgba(20, 35, 65, 0.12);
-  border: 1px solid rgba(91, 155, 191, 0.18);
-  scroll-margin-top: 90px;
-}
-
-.detail-image {
-  min-height: 100%;
-  background: #1e2d4f;
-}
-
-.detail-image img {
-  width: 100%;
-  height: 100%;
-  min-height: 390px;
-  object-fit: cover;
-}
-
-.detail-content {
-  padding: 34px 38px;
-}
-
-.detail-title-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.detail-label {
-  color: #5b9bbf;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-  font-weight: 900;
-  margin-bottom: 4px;
-}
-
-.detail-content h3 {
-  color: #1a2a4a;
-  font-size: 1.75rem;
-  font-weight: 900;
-}
-
-.detail-content > p {
-  color: #4f5b66;
-  line-height: 1.75;
-  margin-bottom: 22px;
-}
-
-.difficulty {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 999px;
-  padding: 8px 13px;
-  font-size: 0.78rem;
-  font-weight: 900;
-}
-
-.difficulty.beginner {
-  background: #e8f5ee;
-  color: #25734a;
-}
-
-.difficulty.intermediate {
-  background: #fff3df;
-  color: #a76614;
-}
-
-.detail-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-bottom: 22px;
-}
-
-.detail-grid div {
-  background: #f5f8fb;
-  border: 1px solid #e0ebf2;
-  border-radius: 14px;
-  padding: 15px;
-}
-
-.detail-grid h4 {
-  color: #1e3a5f;
-  font-size: 0.9rem;
-  font-weight: 900;
-  margin-bottom: 4px;
-}
-
-.detail-grid p {
-  color: #5a6570;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.tip-box {
-  background: #eef6fb;
-  border-left: 5px solid #5b9bbf;
-  border-radius: 12px;
-  padding: 16px 18px;
-  color: #34495e;
-  line-height: 1.65;
-  margin-bottom: 18px;
-}
-
-.back-link {
-  color: #1e3a5f;
-  font-weight: 900;
-  font-size: 0.92rem;
-}
-
-.back-link:hover {
-  color: #5b9bbf;
-}
-
-/* Responsive polish for Fishing Spots */
-@media screen and (max-width: 900px) {
-  .spots-intro {
-    grid-template-columns: 1fr;
-    max-width: 480px;
-  }
-
-  .enhanced-detail {
-    grid-template-columns: 1fr;
-    max-width: 620px;
-  }
-
-  .detail-image img {
-    min-height: 260px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .spots-hero {
-    min-height: 420px;
-    padding: 70px 18px;
-  }
-
-  .spots-hero h1 {
-    font-size: 2.15rem;
-  }
-
-  .spots-hero p {
-    font-size: 0.98rem;
-  }
-
-  .spots-intro {
-    margin-top: -36px;
-    padding: 0 16px;
-  }
-
-  .polished-spots {
-    padding-top: 56px !important;
-  }
-
-  .spot-details-section {
-    padding: 52px 16px;
-  }
-
-  .detail-content {
-    padding: 28px 20px;
-  }
-
-  .detail-title-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .detail-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .detail-content h3 {
-    font-size: 1.45rem;
-  }
-
-  .tip-box {
-    font-size: 0.95rem;
-  }
-}
-/* =============================================
-   Fishing Spots + Individual Detail Pages
-   Mobile-Friendly Polish
-   Author: Patrick Rzepka
-   ============================================= */
-
-.eyebrow {
-  color: #9fd0f0;
-  text-transform: uppercase;
-  letter-spacing: 1.8px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-/* Fishing Spots Main Page */
-.spots-page-hero {
-  position: relative;
-  min-height: 420px;
-  background:
-    linear-gradient(rgba(10, 25, 47, 0.3), rgba(10, 25, 47, 0.62)),
-    url("images/spot2.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 24px;
-  color: #ffffff;
-}
-
-.spots-page-content {
-  max-width: 820px;
-  position: relative;
-  z-index: 2;
-}
-
-.spots-page-content h1 {
-  font-size: clamp(2.3rem, 5vw, 4rem);
-  line-height: 1.08;
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.spots-page-content p {
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: #edf6ff;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.spots-feature-section {
-  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
-  padding: 65px 60px 75px;
-}
-
-.spot-showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-.spot-showcase-card {
-  background: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.12);
-  border: 1px solid rgba(91, 155, 191, 0.18);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-
-.spot-showcase-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 34px rgba(20, 35, 65, 0.16);
-}
-
-.spot-showcase-img {
-  position: relative;
-  height: 230px;
-  overflow: hidden;
-}
-
-.spot-showcase-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.35s ease;
-}
-
-.spot-showcase-card:hover .spot-showcase-img img {
-  transform: scale(1.05);
-}
-
-.spot-tag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(30, 45, 79, 0.92);
-  color: #ffffff;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 7px 12px;
-  border-radius: 999px;
-}
-
-.spot-showcase-body {
-  padding: 24px 22px 26px;
-  text-align: center;
-}
-
-.spot-showcase-body h3 {
-  color: #1a2a4a;
-  font-size: 1.35rem;
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-.spot-showcase-body p {
-  color: #56616d;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.spot-quick-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.spot-quick-info span {
-  background: #eef6fb;
-  color: #1e3a5f;
-  border: 1px solid #d5e8f3;
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-/* Individual Detail Pages */
-.spot-detail-hero {
-  position: relative;
-  height: 520px;
-  overflow: hidden;
-}
-
-.spot-detail-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.spot-detail-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to right, rgba(10, 25, 47, 0.72), rgba(10, 25, 47, 0.22)),
-    linear-gradient(to top, rgba(10, 25, 47, 0.55), transparent);
-}
-
-.spot-detail-hero-text {
-  position: absolute;
-  left: 8%;
-  bottom: 70px;
-  color: #ffffff;
-  max-width: 720px;
-}
-
-.spot-detail-hero-text h1 {
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
-  line-height: 1.05;
-  font-weight: 900;
-  margin-bottom: 16px;
-}
-
-.spot-detail-hero-text p {
-  font-size: 1.1rem;
-  color: #edf6ff;
-  line-height: 1.7;
-}
-
-.spot-detail-page {
-  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
-  padding: 42px 60px 75px;
-}
-
-.back-to-spots {
-  display: inline-flex;
-  align-items: center;
-  color: #1e3a5f;
-  font-weight: 900;
-  margin-bottom: 28px;
-  transition: color 0.2s;
-}
-
-.back-to-spots:hover {
-  color: #5b9bbf;
-}
-
-.detail-page-layout {
-  max-width: 1100px;
-  margin: 0 auto 30px;
-  display: grid;
-  grid-template-columns: 1.8fr 0.9fr;
-  gap: 28px;
-  align-items: start;
-}
-
-.detail-main-card,
-.detail-sidebar,
-.detail-info-card {
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.1);
-  border: 1px solid rgba(91, 155, 191, 0.16);
-}
-
-.detail-main-card {
-  padding: 36px 38px;
-}
-
-.detail-main-card h2 {
-  color: #1a2a4a;
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 16px;
-}
-
-.detail-main-card p {
-  color: #4f5b66;
-  font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 18px;
-}
-
-.tip-box {
-  background: #eef6fb;
-  border-left: 5px solid #5b9bbf;
-  border-radius: 12px;
-  padding: 16px 18px;
-  color: #34495e;
-  line-height: 1.65;
-  margin-top: 20px;
-}
-
-.detail-sidebar {
-  padding: 28px 24px;
-}
-
-.detail-sidebar h3 {
-  color: #1a2a4a;
-  font-size: 1.35rem;
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.fact-row {
-  border-top: 1px solid #e0ebf2;
-  padding: 15px 0;
-}
-
-.fact-row:first-of-type {
-  border-top: none;
-}
-
-.fact-row span {
-  display: block;
-  color: #6b7785;
-  font-size: 0.82rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 4px;
-}
-
-.fact-row strong {
-  color: #1e3a5f;
-  font-size: 0.98rem;
-}
-
-.detail-info-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.detail-info-card {
-  padding: 26px 24px;
-}
-
-.detail-info-card h3 {
-  color: #1a2a4a;
-  font-size: 1.15rem;
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-.detail-info-card p {
-  color: #596675;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* Mobile Friendly */
-@media screen and (max-width: 950px) {
-  .spot-showcase-grid {
-    grid-template-columns: 1fr;
-    max-width: 560px;
-  }
-
-  .detail-page-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .detail-info-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .spots-page-hero {
-    min-height: 420px;
-    padding: 70px 18px;
-  }
-
-  .spots-page-content h1 {
-    font-size: 2.15rem;
-  }
-
-  .spots-page-content p {
-    font-size: 0.98rem;
-  }
-
-  .spots-feature-section {
-    padding: 50px 16px 58px;
-  }
-
-  .spot-showcase-img {
-    height: 220px;
-  }
-
-  .spot-detail-hero {
-    height: 460px;
-  }
-
-  .spot-detail-overlay {
-    background: rgba(10, 25, 47, 0.58);
-  }
-
-  .spot-detail-hero-text {
-    left: 7%;
-    right: 7%;
-    bottom: 48px;
-    max-width: none;
-    text-align: center;
-  }
-
-  .spot-detail-hero-text h1 {
-    font-size: 2.35rem;
-  }
-
-  .spot-detail-hero-text p {
-    font-size: 0.98rem;
-  }
-
-  .spot-detail-page {
-    padding: 34px 16px 56px;
-  }
-
-  .detail-main-card {
-    padding: 28px 22px;
-  }
-
-  .detail-main-card h2 {
-    font-size: 1.65rem;
-  }
-
-  .detail-sidebar {
-    padding: 24px 20px;
-  }
-}
 
 @media screen and (max-width: 420px) {
-  .spot-detail-hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .spot-showcase-body {
-    padding: 22px 18px 24px;
-  }
-
-  .spot-quick-info {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/* =============================================
-   Lure Guide + Individual Lure Detail Pages
-   Mobile-Friendly Polish
-   Author: Patrick Rzepka
-   ============================================= */
-
-/* Lure Guide Main Page */
-.lure-page-hero {
-  position: relative;
-  min-height: 420px;
-  background:
-    linear-gradient(rgba(10, 25, 47, 0.35), rgba(10, 25, 47, 0.65)),
-    url("images/spot1.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 24px;
-  color: #ffffff;
-}
-
-.lure-page-content {
-  max-width: 820px;
-  position: relative;
-  z-index: 2;
-}
-
-.lure-page-content h1 {
-  font-size: clamp(2.3rem, 5vw, 4rem);
-  line-height: 1.08;
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.lure-page-content p {
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: #edf6ff;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.lure-feature-section {
-  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
-  padding: 65px 60px 75px;
-}
-
-.lure-showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-.lure-showcase-card {
-  background: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.12);
-  border: 1px solid rgba(91, 155, 191, 0.18);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-
-.lure-showcase-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 34px rgba(20, 35, 65, 0.16);
-}
-
-.lure-showcase-img {
-  position: relative;
-  height: 230px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.lure-icon-large {
-  font-size: 4.8rem;
-  background: rgba(255, 255, 255, 0.9);
-  width: 120px;
-  height: 120px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
-}
-
-.lure-soft-bg {
-  background:
-    linear-gradient(rgba(30, 45, 79, 0.35), rgba(30, 45, 79, 0.45)),
-    radial-gradient(circle at top left, #7aadcc, #2c3e6b);
-}
-
-.lure-spinner-bg {
-  background:
-    linear-gradient(rgba(30, 45, 79, 0.35), rgba(30, 45, 79, 0.45)),
-    radial-gradient(circle at top right, #9fd0f0, #2c3e6b);
-}
-
-.lure-crank-bg {
-  background:
-    linear-gradient(rgba(30, 45, 79, 0.35), rgba(30, 45, 79, 0.45)),
-    radial-gradient(circle at center, #5b9bbf, #1e2d4f);
-}
-
-.lure-tag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(30, 45, 79, 0.92);
-  color: #ffffff;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 7px 12px;
-  border-radius: 999px;
-}
-
-.lure-showcase-body {
-  padding: 24px 22px 26px;
-  text-align: center;
-}
-
-.lure-showcase-body h3 {
-  color: #1a2a4a;
-  font-size: 1.35rem;
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-.lure-showcase-body p {
-  color: #56616d;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.lure-quick-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.lure-quick-info span {
-  background: #eef6fb;
-  color: #1e3a5f;
-  border: 1px solid #d5e8f3;
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-/* Individual Lure Pages */
-.lure-detail-hero {
-  position: relative;
-  height: 520px;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-}
-
-.lure-detail-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to right, rgba(10, 25, 47, 0.72), rgba(10, 25, 47, 0.25)),
-    linear-gradient(to top, rgba(10, 25, 47, 0.55), transparent);
-}
-
-.lure-detail-hero-text {
-  position: relative;
-  z-index: 2;
-  color: #ffffff;
-  max-width: 720px;
-  margin-left: 8%;
-  margin-bottom: 70px;
-  padding-right: 24px;
-}
-
-.lure-detail-hero-text h1 {
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
-  line-height: 1.05;
-  font-weight: 900;
-  margin-bottom: 16px;
-}
-
-.lure-detail-hero-text p {
-  font-size: 1.1rem;
-  color: #edf6ff;
-  line-height: 1.7;
-}
-
-.lure-detail-page {
-  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
-  padding: 42px 60px 75px;
-}
-
-/* Mobile Friendly */
-@media screen and (max-width: 950px) {
-  .lure-showcase-grid {
-    grid-template-columns: 1fr;
-    max-width: 560px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .lure-page-hero {
-    min-height: 420px;
-    padding: 70px 18px;
-  }
-
-  .lure-page-content h1 {
-    font-size: 2.15rem;
-  }
-
-  .lure-page-content p {
-    font-size: 0.98rem;
-  }
-
-  .lure-feature-section {
-    padding: 50px 16px 58px;
-  }
-
-  .lure-showcase-img {
-    height: 220px;
-  }
-
-  .lure-detail-hero {
-    height: 460px;
-    align-items: flex-end;
-  }
-
-  .lure-detail-overlay {
-    background: rgba(10, 25, 47, 0.62);
-  }
-
-  .lure-detail-hero-text {
-    margin: 0 auto 48px;
-    padding: 0 22px;
-    max-width: none;
-    text-align: center;
-  }
-
-  .lure-detail-hero-text h1 {
-    font-size: 2.35rem;
-  }
-
-  .lure-detail-hero-text p {
-    font-size: 0.98rem;
-  }
-
-  .lure-detail-page {
-    padding: 34px 16px 56px;
-  }
-}
-
-@media screen and (max-width: 420px) {
+  .spot-detail-hero-text h1,
   .lure-detail-hero-text h1 {
     font-size: 2rem;
   }
 
+  .spot-showcase-body,
   .lure-showcase-body {
     padding: 22px 18px 24px;
   }
 
-  .lure-quick-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .lure-icon-large {
-    width: 105px;
-    height: 105px;
-    font-size: 4rem;
-  }
-}
-/* =============================================
-   Lure Guide + Individual Lure Detail Pages
-   Mobile-Friendly Polish
-   Author: Patrick Rzepka
-   ============================================= */
-
-.eyebrow {
-  color: #9fd0f0;
-  text-transform: uppercase;
-  letter-spacing: 1.8px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-/* Main Lure Guide Page */
-.lure-page-hero {
-  position: relative;
-  min-height: 420px;
-  background:
-    linear-gradient(rgba(10, 25, 47, 0.35), rgba(10, 25, 47, 0.68)),
-    url("images/bass.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 24px;
-  color: #ffffff;
-}
-
-.lure-page-content {
-  max-width: 820px;
-  position: relative;
-  z-index: 2;
-}
-
-.lure-page-content h1 {
-  font-size: clamp(2.3rem, 5vw, 4rem);
-  line-height: 1.08;
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.lure-page-content p {
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: #edf6ff;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.lure-feature-section {
-  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
-  padding: 65px 60px 75px;
-}
-
-.lure-showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-.lure-showcase-card {
-  background: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.12);
-  border: 1px solid rgba(91, 155, 191, 0.18);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-
-.lure-showcase-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 34px rgba(20, 35, 65, 0.16);
-}
-
-.lure-showcase-img {
-  position: relative;
-  height: 230px;
-  overflow: hidden;
-}
-
-.lure-showcase-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.35s ease;
-}
-
-.lure-showcase-card:hover .lure-showcase-img img {
-  transform: scale(1.05);
-}
-
-.lure-tag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(30, 45, 79, 0.92);
-  color: #ffffff;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 7px 12px;
-  border-radius: 999px;
-}
-
-.lure-showcase-body {
-  padding: 24px 22px 26px;
-  text-align: center;
-}
-
-.lure-showcase-body h3 {
-  color: #1a2a4a;
-  font-size: 1.35rem;
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-.lure-showcase-body p {
-  color: #56616d;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.lure-quick-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.lure-quick-info span {
-  background: #eef6fb;
-  color: #1e3a5f;
-  border: 1px solid #d5e8f3;
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-/* Individual Lure Pages */
-.lure-detail-hero {
-  position: relative;
-  height: 520px;
-  overflow: hidden;
-}
-
-.lure-detail-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.lure-detail-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to right, rgba(10, 25, 47, 0.72), rgba(10, 25, 47, 0.22)),
-    linear-gradient(to top, rgba(10, 25, 47, 0.55), transparent);
-}
-
-.lure-detail-hero-text {
-  position: absolute;
-  left: 8%;
-  bottom: 70px;
-  color: #ffffff;
-  max-width: 720px;
-}
-
-.lure-detail-hero-text h1 {
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
-  line-height: 1.05;
-  font-weight: 900;
-  margin-bottom: 16px;
-}
-
-.lure-detail-hero-text p {
-  font-size: 1.1rem;
-  color: #edf6ff;
-  line-height: 1.7;
-}
-
-.lure-detail-page {
-  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
-  padding: 42px 60px 75px;
-}
-
-.back-to-spots {
-  display: inline-flex;
-  align-items: center;
-  color: #1e3a5f;
-  font-weight: 900;
-  margin-bottom: 28px;
-  transition: color 0.2s;
-}
-
-.back-to-spots:hover {
-  color: #5b9bbf;
-}
-
-.detail-page-layout {
-  max-width: 1100px;
-  margin: 0 auto 30px;
-  display: grid;
-  grid-template-columns: 1.8fr 0.9fr;
-  gap: 28px;
-  align-items: start;
-}
-
-.detail-main-card,
-.detail-sidebar,
-.detail-info-card {
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.1);
-  border: 1px solid rgba(91, 155, 191, 0.16);
-}
-
-.detail-main-card {
-  padding: 36px 38px;
-}
-
-.detail-main-card h2 {
-  color: #1a2a4a;
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 16px;
-}
-
-.detail-main-card p {
-  color: #4f5b66;
-  font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 18px;
-}
-
-.tip-box {
-  background: #eef6fb;
-  border-left: 5px solid #5b9bbf;
-  border-radius: 12px;
-  padding: 16px 18px;
-  color: #34495e;
-  line-height: 1.65;
-  margin-top: 20px;
-}
-
-.detail-sidebar {
-  padding: 28px 24px;
-}
-
-.detail-sidebar h3 {
-  color: #1a2a4a;
-  font-size: 1.35rem;
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.fact-row {
-  border-top: 1px solid #e0ebf2;
-  padding: 15px 0;
-}
-
-.fact-row:first-of-type {
-  border-top: none;
-}
-
-.fact-row span {
-  display: block;
-  color: #6b7785;
-  font-size: 0.82rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 4px;
-}
-
-.fact-row strong {
-  color: #1e3a5f;
-  font-size: 0.98rem;
-}
-
-.detail-info-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.detail-info-card {
-  padding: 26px 24px;
-}
-
-.detail-info-card h3 {
-  color: #1a2a4a;
-  font-size: 1.15rem;
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-.detail-info-card p {
-  color: #596675;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* Mobile Friendly */
-@media screen and (max-width: 950px) {
-  .lure-showcase-grid {
-    grid-template-columns: 1fr;
-    max-width: 560px;
-  }
-
-  .detail-page-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .detail-info-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .lure-page-hero {
-    min-height: 420px;
-    padding: 70px 18px;
-  }
-
-  .lure-page-content h1 {
-    font-size: 2.15rem;
-  }
-
-  .lure-page-content p {
-    font-size: 0.98rem;
-  }
-
-  .lure-feature-section {
-    padding: 50px 16px 58px;
-  }
-
-  .lure-showcase-img {
-    height: 220px;
-  }
-
-  .lure-detail-hero {
-    height: 460px;
-  }
-
-  .lure-detail-overlay {
-    background: rgba(10, 25, 47, 0.62);
-  }
-
-  .lure-detail-hero-text {
-    left: 7%;
-    right: 7%;
-    bottom: 48px;
-    max-width: none;
-    text-align: center;
-  }
-
-  .lure-detail-hero-text h1 {
-    font-size: 2.35rem;
-  }
-
-  .lure-detail-hero-text p {
-    font-size: 0.98rem;
-  }
-
-  .lure-detail-page {
-    padding: 34px 16px 56px;
-  }
-
-  .detail-main-card {
-    padding: 28px 22px;
-  }
-
-  .detail-main-card h2 {
-    font-size: 1.65rem;
-  }
-
-  .detail-sidebar {
-    padding: 24px 20px;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .lure-detail-hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .lure-showcase-body {
-    padding: 22px 18px 24px;
-  }
-
-  .lure-quick-info {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/* =============================================
-   FINAL Lure Guide Image Fix
-   Author: Patrick Rzepka
-   ============================================= */
-
-/* Main Lure Guide Hero */
-.lure-page-hero {
-  position: relative;
-  min-height: 430px;
-  background:
-    linear-gradient(rgba(10, 25, 47, 0.35), rgba(10, 25, 47, 0.7)),
-    url("images/bass.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 24px;
-  color: #ffffff;
-}
-
-.lure-page-content {
-  max-width: 820px;
-  position: relative;
-  z-index: 2;
-}
-
-.lure-page-content h1 {
-  font-size: clamp(2.3rem, 5vw, 4rem);
-  line-height: 1.08;
-  font-weight: 900;
-  margin-bottom: 18px;
-}
-
-.lure-page-content p {
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: #edf6ff;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-/* Main Lure Cards */
-.lure-feature-section {
-  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
-  padding: 65px 60px 75px;
-}
-
-.lure-showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-.lure-showcase-card {
-  background: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.12);
-  border: 1px solid rgba(91, 155, 191, 0.18);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-
-.lure-showcase-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 34px rgba(20, 35, 65, 0.16);
-}
-
-.lure-showcase-img {
-  position: relative;
-  height: 230px;
-  overflow: hidden;
-  display: block !important;
-  background: none !important;
-}
-
-.lure-showcase-img img {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  transition: transform 0.35s ease;
-}
-
-.lure-showcase-card:hover .lure-showcase-img img {
-  transform: scale(1.05);
-}
-
-/* Hide old emoji/icon design if it still exists in the CSS */
-.lure-icon-large {
-  display: none !important;
-}
-
-.lure-tag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(30, 45, 79, 0.92);
-  color: #ffffff;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 7px 12px;
-  border-radius: 999px;
-}
-
-.lure-showcase-body {
-  padding: 24px 22px 26px;
-  text-align: center;
-}
-
-.lure-showcase-body h3 {
-  color: #1a2a4a;
-  font-size: 1.35rem;
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-.lure-showcase-body p {
-  color: #56616d;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.lure-quick-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.lure-quick-info span {
-  background: #eef6fb;
-  color: #1e3a5f;
-  border: 1px solid #d5e8f3;
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-/* Individual Lure Detail Hero Images */
-.lure-detail-hero {
-  position: relative;
-  height: 520px;
-  overflow: hidden;
-}
-
-.lure-detail-hero img {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-}
-
-.lure-detail-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to right, rgba(10, 25, 47, 0.72), rgba(10, 25, 47, 0.22)),
-    linear-gradient(to top, rgba(10, 25, 47, 0.55), transparent);
-}
-
-.lure-detail-hero-text {
-  position: absolute;
-  left: 8%;
-  bottom: 70px;
-  color: #ffffff;
-  max-width: 720px;
-}
-
-.lure-detail-hero-text h1 {
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
-  line-height: 1.05;
-  font-weight: 900;
-  margin-bottom: 16px;
-}
-
-.lure-detail-hero-text p {
-  font-size: 1.1rem;
-  color: #edf6ff;
-  line-height: 1.7;
-}
-
-.lure-detail-page {
-  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
-  padding: 42px 60px 75px;
-}
-
-/* Mobile */
-@media screen and (max-width: 950px) {
-  .lure-showcase-grid {
-    grid-template-columns: 1fr;
-    max-width: 560px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .lure-page-hero {
-    min-height: 420px;
-    padding: 70px 18px;
-  }
-
-  .lure-page-content h1 {
-    font-size: 2.15rem;
-  }
-
-  .lure-page-content p {
-    font-size: 0.98rem;
-  }
-
-  .lure-feature-section {
-    padding: 50px 16px 58px;
-  }
-
-  .lure-showcase-img {
-    height: 220px;
-  }
-
-  .lure-detail-hero {
-    height: 460px;
-  }
-
-  .lure-detail-overlay {
-    background: rgba(10, 25, 47, 0.62);
-  }
-
-  .lure-detail-hero-text {
-    left: 7%;
-    right: 7%;
-    bottom: 48px;
-    max-width: none;
-    text-align: center;
-  }
-
-  .lure-detail-hero-text h1 {
-    font-size: 2.35rem;
-  }
-
-  .lure-detail-hero-text p {
-    font-size: 0.98rem;
-  }
-
-  .lure-detail-page {
-    padding: 34px 16px 56px;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .lure-detail-hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .lure-showcase-body {
-    padding: 22px 18px 24px;
-  }
-
+  .spot-quick-info,
   .lure-quick-info {
     flex-direction: column;
     align-items: center;

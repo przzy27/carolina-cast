@@ -1,10 +1,9 @@
 /* =============================================
-   Carolina Cast - External Stylesheet (styles.css)
-   Clean Responsive Version
+   Carolina Cast - External Stylesheet
    Author: Patrick Rzepka
    ============================================= */
 
-/* --- Reset & Base --- */
+/* ---------- Reset / Base ---------- */
 *,
 *::before,
 *::after {
@@ -18,6 +17,7 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,8 +28,8 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 img {
@@ -44,7 +44,7 @@ textarea {
   font: inherit;
 }
 
-/* --- Navigation --- */
+/* ---------- Navigation ---------- */
 nav {
   background-color: #2c3e6b;
   display: flex;
@@ -52,7 +52,7 @@ nav {
   justify-content: space-between;
   gap: 24px;
   padding: 10px 30px;
-  min-height: 76px;
+  min-height: 74px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -60,11 +60,11 @@ nav {
 
 .nav-logo-box {
   background-color: #ffffff;
-  border: 2px solid #6f8fc7;
+  border: 2px solid #4a7ab5;
   border-radius: 10px;
   padding: 6px 14px;
-  width: 135px;
-  min-height: 56px;
+  width: 150px;
+  min-height: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,26 +74,26 @@ nav {
 
 .nav-logo-box img {
   width: 100%;
-  max-height: 46px;
+  max-height: 50px;
   object-fit: contain;
 }
 
 .nav-links {
   display: flex;
+  list-style: none;
   align-items: center;
   justify-content: flex-end;
-  gap: 30px;
-  list-style: none;
+  gap: 28px;
   flex-wrap: wrap;
 }
 
 .nav-links a {
   color: #d0dcea;
   font-size: 0.95rem;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
   transition: color 0.2s, background-color 0.2s;
 }
 
@@ -105,17 +105,17 @@ nav {
 .btn-nav {
   background-color: #5b9bbf;
   color: #ffffff !important;
-  padding: 9px 22px;
-  border-radius: 999px;
-  font-size: 0.95rem;
+  padding: 9px 20px;
+  border-radius: 24px;
+  font-size: 0.92rem;
   font-weight: 700;
 }
 
 .btn-nav:hover {
-  background-color: #4a86a8 !important;
+  background-color: #4a86a8;
 }
 
-/* --- Hero --- */
+/* ---------- Hero ---------- */
 .hero {
   position: relative;
   height: 430px;
@@ -134,9 +134,9 @@ nav {
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.14) 0%,
-    rgba(0, 0, 0, 0.18) 42%,
-    rgba(0, 0, 0, 0.62) 100%
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.15) 45%,
+    rgba(0, 0, 0, 0.58) 100%
   );
 }
 
@@ -145,8 +145,8 @@ nav {
   right: 8%;
   top: 50%;
   transform: translateY(-50%);
-  color: #ffffff;
   max-width: 500px;
+  color: #ffffff;
 }
 
 .hero-text h1 {
@@ -154,7 +154,6 @@ nav {
   font-weight: 800;
   line-height: 1.18;
   margin-bottom: 16px;
-  color: #ffffff;
 }
 
 .hero-text p {
@@ -163,7 +162,7 @@ nav {
   line-height: 1.65;
 }
 
-/* --- General Sections --- */
+/* ---------- General Sections ---------- */
 .section,
 .featured-section,
 .seasonal-section,
@@ -174,14 +173,14 @@ nav {
   width: 100%;
 }
 
-.featured-section,
-.seasonal-section,
-.spots-section,
-.lure-cards-section,
-.about-values-section,
-.about-mission-section {
-  padding-left: 60px;
-  padding-right: 60px;
+.featured-section {
+  background-color: #ffffff;
+  padding: 55px 60px;
+}
+
+.seasonal-section {
+  background-color: #f0f2f5;
+  padding: 55px 60px;
 }
 
 .section-title {
@@ -201,7 +200,7 @@ nav {
   max-width: 760px;
 }
 
-/* --- Card Grid --- */
+/* ---------- Cards ---------- */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -211,7 +210,7 @@ nav {
 }
 
 .card {
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.09);
@@ -223,12 +222,6 @@ nav {
   width: 100%;
   height: 180px;
   object-fit: cover;
-}
-
-.card-photo-placeholder {
-  width: 100%;
-  height: 180px;
-  background: linear-gradient(135deg, #7aadcc, #3d6b8a);
 }
 
 .card-body {
@@ -243,20 +236,19 @@ nav {
   margin-bottom: 8px;
 }
 
-.card-body p,
-.card-body .card-meta,
-.card-body .card-season,
-.card-body .card-rec {
+.card-body p {
   font-size: 0.92rem;
   color: #555;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   line-height: 1.55;
 }
 
-.btn-card,
-.btn-submit,
-.filter-btn {
-  min-height: 44px;
+.card-body .card-meta,
+.card-body .card-season,
+.card-body .card-rec {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
 }
 
 .btn-card {
@@ -266,109 +258,161 @@ nav {
   background-color: #5b9bbf;
   color: #ffffff;
   padding: 11px 30px;
+  min-height: 44px;
   border-radius: 9px;
   font-size: 0.95rem;
   font-weight: 700;
-  transition: background-color 0.2s;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
 }
 
 .btn-card:hover {
   background-color: #4a86a8;
 }
 
-/* --- Footer --- */
-footer {
-  background-color: #1e2d4f;
-  color: #c0cfdf;
-  text-align: center;
-  padding: 38px 20px 26px;
-}
-
-.footer-logo-box {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 8px 16px;
-  width: 150px;
-  min-height: 62px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.footer-logo-box img {
-  width: 100%;
-  max-height: 48px;
-  object-fit: contain;
-}
-
-footer .tagline {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 14px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  list-style: none;
-  font-size: 0.86rem;
-  color: #8baac8;
-  flex-wrap: wrap;
-}
-
-.footer-links li + li::before {
-  content: "|";
-  margin-right: 6px;
-  color: #4a6080;
-}
-
-.footer-links a {
-  color: #8baac8;
-  transition: color 0.2s;
-}
-
-.footer-links a:hover {
-  color: #ffffff;
-}
-
-.footer-copy {
-  font-size: 0.78rem;
-  color: #8baac8;
-  margin-top: 12px;
-}
-
-/* --- About Page --- */
-.about-header,
-.spots-header,
-.lure-header,
-.contact-header {
+/* ---------- Fishing Spots Page ---------- */
+.spots-header {
   background-color: #f0f2f5;
   padding: 64px 60px 34px;
   text-align: center;
 }
 
-.about-header h1,
-.spots-header h1,
-.lure-header h1,
-.contact-header h1 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
+.spots-header h1 {
+  font-size: clamp(2rem, 4vw, 2.7rem);
   font-weight: 800;
   color: #1a2a4a;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
-.about-header p,
-.spots-header p,
-.lure-header p,
-.contact-header p {
+.spots-header p {
   font-size: 1rem;
   color: #555;
   max-width: 820px;
+  margin: 0 auto;
+}
+
+.spot-details-section {
+  background-color: #ffffff;
+  padding: 55px 60px;
+}
+
+.detail-card {
+  max-width: 850px;
+  margin: 24px auto;
+  background-color: #f0f2f5;
+  border-radius: 14px;
+  padding: 28px 34px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  scroll-margin-top: 100px;
+}
+
+.detail-card h3 {
+  color: #1a2a4a;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.detail-card p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* ---------- Lure Guide Page ---------- */
+.lure-header {
+  background-color: #f0f2f5;
+  padding: 64px 60px 34px;
+  text-align: center;
+}
+
+.lure-header h1 {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 800;
+  color: #1a2a4a;
+  margin-bottom: 10px;
+}
+
+.lure-header p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.search-wrap {
+  position: relative;
+  display: inline-block;
+  width: min(100%, 420px);
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 18px 12px 44px;
+  border: 1px solid #d0d8e4;
+  border-radius: 9px;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  opacity: 0.55;
+}
+
+.filter-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: #5b9bbf;
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  min-height: 44px;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #4a86a8;
+}
+
+/* ---------- About Page ---------- */
+.about-header {
+  background-color: #f0f2f5;
+  padding: 60px 60px 30px;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #1a2a4a;
+  margin-bottom: 20px;
+}
+
+.about-header p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 680px;
   margin: 0 auto;
   line-height: 1.7;
 }
@@ -390,7 +434,7 @@ footer .tagline {
 }
 
 .mission-text-box {
-  background: #ffffff;
+  background-color: #ffffff;
   padding: 50px 40px;
   display: flex;
   flex-direction: column;
@@ -418,7 +462,6 @@ footer .tagline {
   padding: 20px;
   font-size: 1.25rem;
   font-weight: 800;
-  letter-spacing: 0.5px;
   max-width: 920px;
   margin: 50px auto 30px;
   border-radius: 8px;
@@ -433,12 +476,11 @@ footer .tagline {
 }
 
 .value-card {
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 14px;
   padding: 32px 24px;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
-  min-width: 0;
 }
 
 .value-icon {
@@ -456,77 +498,33 @@ footer .tagline {
 .value-card p {
   font-size: 0.92rem;
   color: #666;
-  line-height: 1.6;
 }
 
-/* --- Lure Guide / Search --- */
-.search-bar {
-  display: flex;
-  justify-content: center;
-  margin: 28px 0 18px;
-}
-
-.search-wrap {
-  position: relative;
-  display: inline-block;
-  width: min(100%, 420px);
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 12px 18px 12px 44px;
-  border: 1px solid #d0d8e4;
-  border-radius: 9px;
-  font-size: 0.95rem;
-  background: #ffffff;
-  color: #333;
-  outline: none;
-}
-
-.search-icon {
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-.filter-btns {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 36px;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  background-color: #5b9bbf;
-  color: #ffffff;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 7px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.filter-btn:hover {
-  background-color: #4a86a8;
-}
-
-/* --- Contact Page --- */
-.contact-page-wrapper {
+/* ---------- Contact Page ---------- */
+.contact-header {
   background-color: #f0f2f5;
-  padding-bottom: 60px;
+  padding: 60px 60px 30px;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #1a2a4a;
+  margin-bottom: 16px;
+}
+
+.contact-header p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 .contact-form-wrap {
   width: min(92%, 820px);
   margin: 40px auto 60px;
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 14px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   padding: 40px 50px;
@@ -560,8 +558,7 @@ footer .tagline {
   border-radius: 7px;
   font-size: 0.95rem;
   color: #333;
-  background: #fff;
-  outline: none;
+  background-color: #ffffff;
 }
 
 .form-group textarea {
@@ -569,15 +566,11 @@ footer .tagline {
   resize: vertical;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #5b9bbf;
-}
-
 .btn-submit {
   background-color: #5b9bbf;
   color: #ffffff;
   padding: 12px 38px;
+  min-height: 44px;
   border: none;
   border-radius: 9px;
   font-size: 0.96rem;
@@ -589,19 +582,70 @@ footer .tagline {
   background-color: #4a86a8;
 }
 
-/* =============================================
-   Responsive Layouts
-   ============================================= */
+/* ---------- Footer ---------- */
+footer {
+  background-color: #1e2d4f;
+  color: #c0cfdf;
+  text-align: center;
+  padding: 38px 20px 26px;
+}
+
+.footer-logo-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.footer-logo-box img {
+  height: 42px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+}
+
+footer .tagline {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  list-style: none;
+  font-size: 0.86rem;
+  color: #8baac8;
+  flex-wrap: wrap;
+}
+
+.footer-links li + li::before {
+  content: "|";
+  margin-right: 6px;
+  color: #4a6080;
+}
+
+.footer-links a {
+  color: #8baac8;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  color: #8baac8;
+  margin-top: 12px;
+}
+
+/* ---------- Responsive Layout ---------- */
 @media screen and (max-width: 1000px) {
-  nav {
-    gap: 16px;
-    padding: 12px 22px;
-  }
-
-  .nav-links {
-    gap: 18px;
-  }
-
   .card-grid,
   .values-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -618,21 +662,21 @@ footer .tagline {
   nav {
     position: static;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     min-height: 0;
-    padding: 16px;
-    gap: 14px;
+    padding: 14px 16px 16px;
+    gap: 12px;
   }
 
   .nav-logo-box {
-    width: 155px;
-    min-height: 66px;
+    width: 160px;
+    min-height: 62px;
     margin: 0 auto;
   }
 
   .nav-logo-box img {
-    max-height: 54px;
+    max-height: 52px;
   }
 
   .nav-links {
@@ -654,20 +698,15 @@ footer .tagline {
 
   .nav-links a {
     width: 100%;
-    padding: 11px 12px;
-    min-height: 44px;
+    padding: 10px 12px;
     text-align: center;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.06);
-  }
-
-  .nav-links a:hover,
-  .nav-links a.active {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.05);
   }
 
   .btn-nav {
-    width: min(100%, 260px) !important;
+    width: min(100%, 260px);
+    border-radius: 999px;
   }
 
   .hero {
@@ -675,7 +714,7 @@ footer .tagline {
   }
 
   .hero-overlay {
-    background: rgba(0, 0, 0, 0.58);
+    background: rgba(0, 0, 0, 0.52);
   }
 
   .hero-text {
@@ -692,17 +731,13 @@ footer .tagline {
     font-size: 2rem;
   }
 
-  .hero-text p {
-    font-size: 1rem;
-  }
-
   .featured-section,
   .seasonal-section,
   .spots-section,
   .lure-cards-section,
   .about-values-section,
   .about-mission-section,
-  .section {
+  .spot-details-section {
     padding-left: 22px !important;
     padding-right: 22px !important;
   }
@@ -756,8 +791,8 @@ footer .tagline {
   }
 
   .nav-logo-box {
-    width: 145px;
-    min-height: 62px;
+    width: 150px;
+    min-height: 58px;
   }
 
   .nav-links {
@@ -777,10 +812,6 @@ footer .tagline {
     height: 440px;
   }
 
-  .hero img.hero-img {
-    object-position: center center;
-  }
-
   .hero-text h1 {
     font-size: 1.65rem;
   }
@@ -795,7 +826,7 @@ footer .tagline {
   .lure-cards-section,
   .about-values-section,
   .about-mission-section,
-  .section {
+  .spot-details-section {
     padding: 34px 16px !important;
   }
 
@@ -823,27 +854,12 @@ footer .tagline {
     font-size: 0.98rem;
   }
 
-  .card-grid,
-  .values-grid {
-    max-width: 100%;
-  }
-
   .card-photo {
     height: 200px;
   }
 
-  .card-body {
-    padding: 18px 16px 0;
-  }
-
-  .filter-btns {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .filter-btn {
-    width: 100%;
-    max-width: 260px;
+  .detail-card {
+    padding: 24px 20px;
   }
 
   .footer-links {
@@ -853,16 +869,5 @@ footer .tagline {
 
   .footer-links li + li::before {
     content: none;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .hero-text h1 {
-    font-size: 1.45rem;
-  }
-
-  .hero-text p,
-  .nav-links a {
-    font-size: 0.9rem;
   }
 }

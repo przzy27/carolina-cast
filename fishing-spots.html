@@ -5,6 +5,336 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fishing Spots - Carolina Cast</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo-box">
+      <img src="images/Carolina_Cast.png" alt="Carolina Cast Logo">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fishing-spots.html" class="active">Fishing Spots</a></li>
+      <li><a href="lure-guide.html">Lure Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="btn-nav">Plan Your Trip</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="spots-hero">
+    <div class="spots-hero-overlay"></div>
+
+    <div class="spots-hero-content">
+      <p class="eyebrow">Local Carolina Fishing Guide</p>
+      <h1>Find Your Next Fishing Spot</h1>
+      <p>
+        Explore beginner-friendly ponds, larger reservoirs, and peaceful local
+        fishing areas with quick tips on fish species, seasons, and trip planning.
+      </p>
+    </div>
+  </header>
+
+  <!-- INTRO STRIP -->
+  <section class="spots-intro">
+    <div class="intro-stat">
+      <span>3</span>
+      <p>Featured Spots</p>
+    </div>
+
+    <div class="intro-stat">
+      <span>6+</span>
+      <p>Common Fish Species</p>
+    </div>
+
+    <div class="intro-stat">
+      <span>Beginner</span>
+      <p>Friendly Options</p>
+    </div>
+  </section>
+
+  <!-- SPOT CARDS -->
+  <section class="spots-section polished-spots">
+    <h2 class="section-title">Featured Fishing Spots</h2>
+    <p class="section-subtitle">
+      Each spot includes a quick overview and a detailed section to help you decide
+      where to fish based on skill level, season, and target species.
+    </p>
+
+    <div class="card-grid">
+
+      <article class="card spot-card">
+        <div class="spot-image-wrap">
+          <img class="card-photo" src="images/spot1.jpg" alt="Cane Creek Park fishing area">
+          <span class="spot-badge">Beginner Friendly</span>
+        </div>
+
+        <div class="card-body">
+          <h3>Cane Creek Park</h3>
+          <p class="card-meta">Best Season: Spring-Fall</p>
+          <p>
+            A peaceful local spot with bass, bluegill, and catfish opportunities.
+            Great for families, beginners, and casual weekend trips.
+          </p>
+
+          <div class="mini-info">
+            <span>🎣 Bass</span>
+            <span>🌤 Spring-Fall</span>
+          </div>
+
+          <a href="#cane-creek-details" class="btn-card">View Details</a>
+        </div>
+      </article>
+
+      <article class="card spot-card">
+        <div class="spot-image-wrap">
+          <img class="card-photo" src="images/spot2.jpg" alt="Lake Wylie fishing location">
+          <span class="spot-badge">Best Variety</span>
+        </div>
+
+        <div class="card-body">
+          <h3>Lake Wylie</h3>
+          <p class="card-meta">Best Season: Year-round</p>
+          <p>
+            A larger reservoir with reliable fishing, deeper water, and more room
+            for boat fishing. Bass, crappie, and catfish are common catches.
+          </p>
+
+          <div class="mini-info">
+            <span>🚤 Boat Access</span>
+            <span>🐟 Crappie</span>
+          </div>
+
+          <a href="#lake-wylie-details" class="btn-card">View Details</a>
+        </div>
+      </article>
+
+      <article class="card spot-card">
+        <div class="spot-image-wrap">
+          <img class="card-photo" src="images/spot3.jpg" alt="Waxhaw Community Pond fishing spot">
+          <span class="spot-badge">Quick Trip</span>
+        </div>
+
+        <div class="card-body">
+          <h3>Waxhaw Community Pond</h3>
+          <p class="card-meta">Best Season: Spring-Summer</p>
+          <p>
+            A calm community pond ideal for quick catch-and-release trips,
+            beginner anglers, and relaxed local fishing close to Waxhaw.
+          </p>
+
+          <div class="mini-info">
+            <span>📍 Local</span>
+            <span>🐠 Bluegill</span>
+          </div>
+
+          <a href="#waxhaw-pond-details" class="btn-card">View Details</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- DETAILS SECTION -->
+  <section class="spot-details-section">
+    <div class="details-heading">
+      <p class="eyebrow">Plan Before You Cast</p>
+      <h2>Fishing Spot Details</h2>
+      <p>
+        Use these details to compare each location and choose the best spot based
+        on your experience level, target fish, and trip style.
+      </p>
+    </div>
+
+    <!-- CANE CREEK -->
+    <article id="cane-creek-details" class="detail-card enhanced-detail">
+      <div class="detail-image">
+        <img src="images/spot1.jpg" alt="Cane Creek Park water view">
+      </div>
+
+      <div class="detail-content">
+        <div class="detail-title-row">
+          <div>
+            <p class="detail-label">Spot 01</p>
+            <h3>Cane Creek Park</h3>
+          </div>
+          <span class="difficulty beginner">Beginner</span>
+        </div>
+
+        <p>
+          Cane Creek Park is a peaceful fishing location that works well for
+          families, beginners, and casual anglers. It offers shoreline access,
+          calm scenery, and a relaxed outdoor setting.
+        </p>
+
+        <div class="detail-grid">
+          <div>
+            <h4>Best For</h4>
+            <p>Bass, bluegill, and catfish</p>
+          </div>
+
+          <div>
+            <h4>Best Season</h4>
+            <p>Spring through fall</p>
+          </div>
+
+          <div>
+            <h4>Recommended Lures</h4>
+            <p>Soft plastics, worms, small jigs</p>
+          </div>
+
+          <div>
+            <h4>Trip Style</h4>
+            <p>Relaxed bank fishing</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <strong>Tip:</strong> Try fishing early morning or near sunset when fish
+          are more active along the shoreline.
+        </div>
+
+        <a href="#top" class="back-link">Back to top ↑</a>
+      </div>
+    </article>
+
+    <!-- LAKE WYLIE -->
+    <article id="lake-wylie-details" class="detail-card enhanced-detail">
+      <div class="detail-image">
+        <img src="images/spot2.jpg" alt="Lake Wylie fishing area">
+      </div>
+
+      <div class="detail-content">
+        <div class="detail-title-row">
+          <div>
+            <p class="detail-label">Spot 02</p>
+            <h3>Lake Wylie</h3>
+          </div>
+          <span class="difficulty intermediate">Intermediate</span>
+        </div>
+
+        <p>
+          Lake Wylie is a larger reservoir with more fishing variety, deeper water,
+          and stronger opportunities for bass, crappie, and catfish. It is a good
+          option for anglers who want a bigger fishing experience.
+        </p>
+
+        <div class="detail-grid">
+          <div>
+            <h4>Best For</h4>
+            <p>Bass, crappie, and catfish</p>
+          </div>
+
+          <div>
+            <h4>Best Season</h4>
+            <p>Year-round</p>
+          </div>
+
+          <div>
+            <h4>Recommended Lures</h4>
+            <p>Crankbaits, spinnerbaits, jigs</p>
+          </div>
+
+          <div>
+            <h4>Trip Style</h4>
+            <p>Boat or shoreline fishing</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <strong>Tip:</strong> Focus near docks, shaded banks, and structure where
+          bass and crappie are more likely to hold.
+        </div>
+
+        <a href="#top" class="back-link">Back to top ↑</a>
+      </div>
+    </article>
+
+    <!-- WAXHAW POND -->
+    <article id="waxhaw-pond-details" class="detail-card enhanced-detail">
+      <div class="detail-image">
+        <img src="images/spot3.jpg" alt="Waxhaw Community Pond fishing location">
+      </div>
+
+      <div class="detail-content">
+        <div class="detail-title-row">
+          <div>
+            <p class="detail-label">Spot 03</p>
+            <h3>Waxhaw Community Pond</h3>
+          </div>
+          <span class="difficulty beginner">Beginner</span>
+        </div>
+
+        <p>
+          Waxhaw Community Pond is a simple local fishing option for quick trips.
+          It is ideal for beginners, families, or anyone who wants an easy
+          catch-and-release fishing experience close to home.
+        </p>
+
+        <div class="detail-grid">
+          <div>
+            <h4>Best For</h4>
+            <p>Bluegill and small bass</p>
+          </div>
+
+          <div>
+            <h4>Best Season</h4>
+            <p>Spring and summer</p>
+          </div>
+
+          <div>
+            <h4>Recommended Lures</h4>
+            <p>Live worms, bobbers, small spinners</p>
+          </div>
+
+          <div>
+            <h4>Trip Style</h4>
+            <p>Short local fishing trip</p>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <strong>Tip:</strong> Use a small hook and bobber setup for bluegill.
+          This is a great place to practice casting and basic fishing skills.
+        </div>
+
+        <a href="#top" class="back-link">Back to top ↑</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo-box">
+      <img src="images/Carolina_Cast.png" alt="Carolina Cast Logo">
+    </div>
+
+    <p class="tagline">Helping anglers find better fishing spots across the Carolinas.</p>
+
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fishing-spots.html">Fishing Spots</a></li>
+      <li><a href="lure-guide.html">Lure Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <p class="footer-copy">© 2026 Carolina Cast. All rights reserved.</p>
+  </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Author: Patrick Rzepka -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fishing Spots - Carolina Cast</title>
 
   <link rel="stylesheet" href="styles.css">
 

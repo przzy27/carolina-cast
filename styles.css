@@ -1,6 +1,6 @@
 /* =============================================
    Carolina Cast - External Stylesheet (styles.css)
-   Mobile-Friendly Responsive Version
+   Clean Responsive Version
    Author: Patrick Rzepka
    ============================================= */
 
@@ -21,7 +21,7 @@ body {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f2f5;
   color: #1a1a2e;
   line-height: 1.6;
@@ -52,7 +52,7 @@ nav {
   justify-content: space-between;
   gap: 24px;
   padding: 10px 30px;
-  min-height: 70px;
+  min-height: 76px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -60,40 +60,41 @@ nav {
 
 .nav-logo-box {
   background-color: #ffffff;
-  border: 2px solid #4a7ab5;
-  border-radius: 8px;
-  padding: 6px 12px;
+  border: 2px solid #6f8fc7;
+  border-radius: 10px;
+  padding: 6px 14px;
+  width: 135px;
+  min-height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 128px;
-  min-height: 52px;
+  overflow: hidden;
 }
 
 .nav-logo-box img {
   width: 100%;
-  max-height: 42px;
+  max-height: 46px;
   object-fit: contain;
 }
 
 .nav-links {
   display: flex;
-  list-style: none;
-  gap: 30px;
   align-items: center;
   justify-content: flex-end;
+  gap: 30px;
+  list-style: none;
   flex-wrap: wrap;
 }
 
 .nav-links a {
   color: #d0dcea;
   font-size: 0.95rem;
-  transition: color 0.2s, background-color 0.2s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 44px;
+  transition: color 0.2s, background-color 0.2s;
 }
 
 .nav-links a:hover,
@@ -104,11 +105,10 @@ nav {
 .btn-nav {
   background-color: #5b9bbf;
   color: #ffffff !important;
-  padding: 9px 20px;
-  border-radius: 24px;
-  font-size: 0.92rem;
-  font-weight: 600;
-  transition: background-color 0.2s !important;
+  padding: 9px 22px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .btn-nav:hover {
@@ -134,9 +134,9 @@ nav {
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.12) 0%,
-    rgba(0, 0, 0, 0.12) 42%,
-    rgba(0, 0, 0, 0.58) 100%
+    rgba(0, 0, 0, 0.14) 0%,
+    rgba(0, 0, 0, 0.18) 42%,
+    rgba(0, 0, 0, 0.62) 100%
   );
 }
 
@@ -163,17 +163,25 @@ nav {
   line-height: 1.65;
 }
 
-/* --- Sections --- */
-.section {
-  padding: 55px 60px;
+/* --- General Sections --- */
+.section,
+.featured-section,
+.seasonal-section,
+.spots-section,
+.lure-cards-section,
+.about-values-section,
+.about-mission-section {
+  width: 100%;
 }
 
-.section-white {
-  background-color: #ffffff;
-}
-
-.section-gray {
-  background-color: #f0f2f5;
+.featured-section,
+.seasonal-section,
+.spots-section,
+.lure-cards-section,
+.about-values-section,
+.about-mission-section {
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .section-title {
@@ -189,28 +197,8 @@ nav {
   font-size: 1rem;
   color: #444;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
   max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section-subtitle-light {
-  text-align: left;
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 30px;
-  max-width: 700px;
-}
-
-/* These classes are also used as page-specific sections in your HTML */
-.featured-section,
-.seasonal-section,
-.spots-section,
-.lure-cards-section,
-.about-values-section,
-.about-mission-section {
-  width: 100%;
 }
 
 /* --- Card Grid --- */
@@ -255,19 +243,20 @@ nav {
   margin-bottom: 8px;
 }
 
-.card-body p {
-  font-size: 0.92rem;
-  color: #555;
-  margin-bottom: 16px;
-  line-height: 1.55;
-}
-
+.card-body p,
 .card-body .card-meta,
 .card-body .card-season,
 .card-body .card-rec {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: #555;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
+  line-height: 1.55;
+}
+
+.btn-card,
+.btn-submit,
+.filter-btn {
+  min-height: 44px;
 }
 
 .btn-card {
@@ -277,7 +266,6 @@ nav {
   background-color: #5b9bbf;
   color: #ffffff;
   padding: 11px 30px;
-  min-height: 44px;
   border-radius: 9px;
   font-size: 0.95rem;
   font-weight: 700;
@@ -300,8 +288,10 @@ footer {
 
 .footer-logo-box {
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 8px 16px;
+  width: 150px;
+  min-height: 62px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -309,9 +299,8 @@ footer {
 }
 
 .footer-logo-box img {
-  height: 42px;
-  width: auto;
-  max-width: 140px;
+  width: 100%;
+  max-height: 48px;
   object-fit: contain;
 }
 
@@ -333,7 +322,7 @@ footer .tagline {
 }
 
 .footer-links li + li::before {
-  content: '|';
+  content: "|";
   margin-right: 6px;
   color: #4a6080;
 }
@@ -354,23 +343,32 @@ footer .tagline {
 }
 
 /* --- About Page --- */
-.about-header {
+.about-header,
+.spots-header,
+.lure-header,
+.contact-header {
   background-color: #f0f2f5;
-  padding: 60px 60px 30px;
+  padding: 64px 60px 34px;
   text-align: center;
 }
 
-.about-header h1 {
+.about-header h1,
+.spots-header h1,
+.lure-header h1,
+.contact-header h1 {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
   color: #1a2a4a;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
-.about-header p {
+.about-header p,
+.spots-header p,
+.lure-header p,
+.contact-header p {
   font-size: 1rem;
-  color: #444;
-  max-width: 680px;
+  color: #555;
+  max-width: 820px;
   margin: 0 auto;
   line-height: 1.7;
 }
@@ -461,51 +459,11 @@ footer .tagline {
   line-height: 1.6;
 }
 
-/* --- Fishing Spots Page --- */
-.spots-header {
-  background-color: #f0f2f5;
-  padding: 64px 60px 34px;
-  text-align: center;
-}
-
-.spots-header h1 {
-  font-size: clamp(2rem, 4vw, 2.7rem);
-  font-weight: 800;
-  color: #1a2a4a;
-  margin-bottom: 12px;
-}
-
-.spots-header p {
-  font-size: 1rem;
-  color: #555;
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-/* --- Lure Guide Page --- */
-.lure-header {
-  background-color: #f0f2f5;
-  padding: 64px 60px 34px;
-  text-align: center;
-}
-
-.lure-header h1 {
-  font-size: clamp(2rem, 4vw, 2.7rem);
-  font-weight: 800;
-  color: #1a2a4a;
-  margin-bottom: 10px;
-}
-
-.lure-header p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 28px;
-}
-
+/* --- Lure Guide / Search --- */
 .search-bar {
   display: flex;
   justify-content: center;
-  margin-bottom: 18px;
+  margin: 28px 0 18px;
 }
 
 .search-wrap {
@@ -536,10 +494,6 @@ footer .tagline {
   pointer-events: none;
 }
 
-.search-bar input:focus {
-  border-color: #5b9bbf;
-}
-
 .filter-btns {
   display: flex;
   justify-content: center;
@@ -553,12 +507,10 @@ footer .tagline {
   color: #ffffff;
   border: none;
   padding: 10px 22px;
-  min-height: 44px;
   border-radius: 7px;
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .filter-btn:hover {
@@ -566,25 +518,9 @@ footer .tagline {
 }
 
 /* --- Contact Page --- */
-.contact-header {
+.contact-page-wrapper {
   background-color: #f0f2f5;
-  padding: 60px 60px 30px;
-  text-align: center;
-}
-
-.contact-header h1 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
-  color: #1a2a4a;
-  margin-bottom: 16px;
-}
-
-.contact-header p {
-  font-size: 1rem;
-  color: #555;
-  max-width: 680px;
-  margin: 0 auto;
-  line-height: 1.6;
+  padding-bottom: 60px;
 }
 
 .contact-form-wrap {
@@ -626,7 +562,6 @@ footer .tagline {
   color: #333;
   background: #fff;
   outline: none;
-  transition: border-color 0.2s;
 }
 
 .form-group textarea {
@@ -643,13 +578,11 @@ footer .tagline {
   background-color: #5b9bbf;
   color: #ffffff;
   padding: 12px 38px;
-  min-height: 44px;
   border: none;
   border-radius: 9px;
   font-size: 0.96rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .btn-submit:hover {
@@ -659,8 +592,6 @@ footer .tagline {
 /* =============================================
    Responsive Layouts
    ============================================= */
-
-/* Medium tablets and small laptops */
 @media screen and (max-width: 1000px) {
   nav {
     gap: 16px;
@@ -683,28 +614,25 @@ footer .tagline {
   }
 }
 
-/* Tablets and large phones */
 @media screen and (max-width: 760px) {
   nav {
     position: static;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
     min-height: 0;
-    padding: 14px 16px 16px;
-    gap: 12px;
+    padding: 16px;
+    gap: 14px;
   }
 
   .nav-logo-box {
-    width: 140px;
-    min-height: 54px;
+    width: 155px;
+    min-height: 66px;
     margin: 0 auto;
   }
 
   .nav-logo-box img {
-    width: 100%;
-    max-height: 42px;
+    max-height: 54px;
   }
 
   .nav-links {
@@ -726,21 +654,20 @@ footer .tagline {
 
   .nav-links a {
     width: 100%;
-    padding: 10px 12px;
+    padding: 11px 12px;
     min-height: 44px;
     text-align: center;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: rgba(255, 255, 255, 0.06);
   }
 
   .nav-links a:hover,
   .nav-links a.active {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.12);
   }
 
   .btn-nav {
     width: min(100%, 260px) !important;
-    border-radius: 999px !important;
   }
 
   .hero {
@@ -748,7 +675,7 @@ footer .tagline {
   }
 
   .hero-overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.58);
   }
 
   .hero-text {
@@ -812,14 +739,6 @@ footer .tagline {
     padding: 34px 22px;
   }
 
-  .search-wrap {
-    width: min(100%, 420px);
-  }
-
-  .filter-btns {
-    gap: 10px;
-  }
-
   .contact-form-wrap {
     width: calc(100% - 36px);
     padding: 30px 22px;
@@ -831,15 +750,14 @@ footer .tagline {
   }
 }
 
-/* Small phones */
 @media screen and (max-width: 480px) {
   nav {
     padding: 12px;
   }
 
   .nav-logo-box {
-    width: 126px;
-    min-height: 50px;
+    width: 145px;
+    min-height: 62px;
   }
 
   .nav-links {
@@ -918,17 +836,6 @@ footer .tagline {
     padding: 18px 16px 0;
   }
 
-  .card-body h3 {
-    font-size: 1.15rem;
-  }
-
-  .card-body p,
-  .card-body .card-meta,
-  .card-body .card-season,
-  .card-body .card-rec {
-    font-size: 0.95rem;
-  }
-
   .filter-btns {
     flex-direction: column;
     align-items: center;
@@ -937,14 +844,6 @@ footer .tagline {
   .filter-btn {
     width: 100%;
     max-width: 260px;
-  }
-
-  .mission-photo {
-    height: 220px;
-  }
-
-  .why-banner {
-    margin-top: 34px;
   }
 
   .footer-links {
@@ -957,16 +856,12 @@ footer .tagline {
   }
 }
 
-/* Very small phones */
 @media screen and (max-width: 360px) {
   .hero-text h1 {
     font-size: 1.45rem;
   }
 
-  .hero-text p {
-    font-size: 0.88rem;
-  }
-
+  .hero-text p,
   .nav-links a {
     font-size: 0.9rem;
   }

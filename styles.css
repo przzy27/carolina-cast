@@ -871,3 +871,361 @@ footer .tagline {
     content: none;
   }
 }
+/* =============================================
+   Polished Fishing Spots Page
+   Author: Patrick Rzepka
+   ============================================= */
+
+.spots-hero {
+  position: relative;
+  min-height: 420px;
+  background:
+    linear-gradient(rgba(10, 25, 47, 0.25), rgba(10, 25, 47, 0.55)),
+    url("images/spot2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  color: #ffffff;
+}
+
+.spots-hero-content {
+  max-width: 820px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: #9fd0f0;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.spots-hero h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.08;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.spots-hero p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #edf6ff;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.spots-intro {
+  max-width: 950px;
+  margin: -48px auto 0;
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 0 24px;
+}
+
+.intro-stat {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 18px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.14);
+  border: 1px solid rgba(91, 155, 191, 0.18);
+}
+
+.intro-stat span {
+  display: block;
+  color: #1e3a5f;
+  font-size: 1.55rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.intro-stat p {
+  color: #5d6b7a;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.polished-spots {
+  padding-top: 70px !important;
+}
+
+.spot-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.spot-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(20, 35, 65, 0.15);
+}
+
+.spot-image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.spot-image-wrap .card-photo {
+  height: 210px;
+  transition: transform 0.3s ease;
+}
+
+.spot-card:hover .card-photo {
+  transform: scale(1.04);
+}
+
+.spot-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(30, 45, 79, 0.92);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 7px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+.mini-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 18px;
+}
+
+.mini-info span {
+  background: #eef6fb;
+  color: #1e3a5f;
+  border: 1px solid #d5e8f3;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.spot-details-section {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
+  padding: 70px 60px;
+}
+
+.details-heading {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.details-heading h2 {
+  color: #1a2a4a;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.details-heading p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.enhanced-detail {
+  max-width: 1050px;
+  margin: 32px auto;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 38% 62%;
+  box-shadow: 0 14px 35px rgba(20, 35, 65, 0.12);
+  border: 1px solid rgba(91, 155, 191, 0.18);
+  scroll-margin-top: 90px;
+}
+
+.detail-image {
+  min-height: 100%;
+  background: #1e2d4f;
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  object-fit: cover;
+}
+
+.detail-content {
+  padding: 34px 38px;
+}
+
+.detail-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.detail-label {
+  color: #5b9bbf;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.detail-content h3 {
+  color: #1a2a4a;
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+
+.detail-content > p {
+  color: #4f5b66;
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+
+.difficulty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.difficulty.beginner {
+  background: #e8f5ee;
+  color: #25734a;
+}
+
+.difficulty.intermediate {
+  background: #fff3df;
+  color: #a76614;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.detail-grid div {
+  background: #f5f8fb;
+  border: 1px solid #e0ebf2;
+  border-radius: 14px;
+  padding: 15px;
+}
+
+.detail-grid h4 {
+  color: #1e3a5f;
+  font-size: 0.9rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.detail-grid p {
+  color: #5a6570;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.tip-box {
+  background: #eef6fb;
+  border-left: 5px solid #5b9bbf;
+  border-radius: 12px;
+  padding: 16px 18px;
+  color: #34495e;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.back-link {
+  color: #1e3a5f;
+  font-weight: 900;
+  font-size: 0.92rem;
+}
+
+.back-link:hover {
+  color: #5b9bbf;
+}
+
+/* Responsive polish for Fishing Spots */
+@media screen and (max-width: 900px) {
+  .spots-intro {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .enhanced-detail {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+  }
+
+  .detail-image img {
+    min-height: 260px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .spots-hero {
+    min-height: 420px;
+    padding: 70px 18px;
+  }
+
+  .spots-hero h1 {
+    font-size: 2.15rem;
+  }
+
+  .spots-hero p {
+    font-size: 0.98rem;
+  }
+
+  .spots-intro {
+    margin-top: -36px;
+    padding: 0 16px;
+  }
+
+  .polished-spots {
+    padding-top: 56px !important;
+  }
+
+  .spot-details-section {
+    padding: 52px 16px;
+  }
+
+  .detail-content {
+    padding: 28px 20px;
+  }
+
+  .detail-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-content h3 {
+    font-size: 1.45rem;
+  }
+
+  .tip-box {
+    font-size: 0.95rem;
+  }
+}

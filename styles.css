@@ -1634,3 +1634,286 @@ footer .tagline {
     align-items: center;
   }
 }
+/* =============================================
+   Lure Guide + Individual Lure Detail Pages
+   Mobile-Friendly Polish
+   Author: Patrick Rzepka
+   ============================================= */
+
+/* Lure Guide Main Page */
+.lure-page-hero {
+  position: relative;
+  min-height: 420px;
+  background:
+    linear-gradient(rgba(10, 25, 47, 0.35), rgba(10, 25, 47, 0.65)),
+    url("images/spot1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  color: #ffffff;
+}
+
+.lure-page-content {
+  max-width: 820px;
+  position: relative;
+  z-index: 2;
+}
+
+.lure-page-content h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.08;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.lure-page-content p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #edf6ff;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.lure-feature-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
+  padding: 65px 60px 75px;
+}
+
+.lure-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.lure-showcase-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(20, 35, 65, 0.12);
+  border: 1px solid rgba(91, 155, 191, 0.18);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.lure-showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(20, 35, 65, 0.16);
+}
+
+.lure-showcase-img {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lure-icon-large {
+  font-size: 4.8rem;
+  background: rgba(255, 255, 255, 0.9);
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+.lure-soft-bg {
+  background:
+    linear-gradient(rgba(30, 45, 79, 0.35), rgba(30, 45, 79, 0.45)),
+    radial-gradient(circle at top left, #7aadcc, #2c3e6b);
+}
+
+.lure-spinner-bg {
+  background:
+    linear-gradient(rgba(30, 45, 79, 0.35), rgba(30, 45, 79, 0.45)),
+    radial-gradient(circle at top right, #9fd0f0, #2c3e6b);
+}
+
+.lure-crank-bg {
+  background:
+    linear-gradient(rgba(30, 45, 79, 0.35), rgba(30, 45, 79, 0.45)),
+    radial-gradient(circle at center, #5b9bbf, #1e2d4f);
+}
+
+.lure-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(30, 45, 79, 0.92);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 7px 12px;
+  border-radius: 999px;
+}
+
+.lure-showcase-body {
+  padding: 24px 22px 26px;
+  text-align: center;
+}
+
+.lure-showcase-body h3 {
+  color: #1a2a4a;
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.lure-showcase-body p {
+  color: #56616d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.lure-quick-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.lure-quick-info span {
+  background: #eef6fb;
+  color: #1e3a5f;
+  border: 1px solid #d5e8f3;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* Individual Lure Pages */
+.lure-detail-hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.lure-detail-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(10, 25, 47, 0.72), rgba(10, 25, 47, 0.25)),
+    linear-gradient(to top, rgba(10, 25, 47, 0.55), transparent);
+}
+
+.lure-detail-hero-text {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 720px;
+  margin-left: 8%;
+  margin-bottom: 70px;
+  padding-right: 24px;
+}
+
+.lure-detail-hero-text h1 {
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 1.05;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.lure-detail-hero-text p {
+  font-size: 1.1rem;
+  color: #edf6ff;
+  line-height: 1.7;
+}
+
+.lure-detail-page {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f2f5 100%);
+  padding: 42px 60px 75px;
+}
+
+/* Mobile Friendly */
+@media screen and (max-width: 950px) {
+  .lure-showcase-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .lure-page-hero {
+    min-height: 420px;
+    padding: 70px 18px;
+  }
+
+  .lure-page-content h1 {
+    font-size: 2.15rem;
+  }
+
+  .lure-page-content p {
+    font-size: 0.98rem;
+  }
+
+  .lure-feature-section {
+    padding: 50px 16px 58px;
+  }
+
+  .lure-showcase-img {
+    height: 220px;
+  }
+
+  .lure-detail-hero {
+    height: 460px;
+    align-items: flex-end;
+  }
+
+  .lure-detail-overlay {
+    background: rgba(10, 25, 47, 0.62);
+  }
+
+  .lure-detail-hero-text {
+    margin: 0 auto 48px;
+    padding: 0 22px;
+    max-width: none;
+    text-align: center;
+  }
+
+  .lure-detail-hero-text h1 {
+    font-size: 2.35rem;
+  }
+
+  .lure-detail-hero-text p {
+    font-size: 0.98rem;
+  }
+
+  .lure-detail-page {
+    padding: 34px 16px 56px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .lure-detail-hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .lure-showcase-body {
+    padding: 22px 18px 24px;
+  }
+
+  .lure-quick-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lure-icon-large {
+    width: 105px;
+    height: 105px;
+    font-size: 4rem;
+  }
+}

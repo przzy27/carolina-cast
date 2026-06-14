@@ -1278,3 +1278,59 @@ footer .tagline {
     align-items: center;
   }
 }
+/* Fishing Spots mobile cleanup */
+@media screen and (max-width: 950px) {
+  .spot-showcase-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .spot-showcase-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .spots-page-hero {
+    min-height: 420px;
+    padding: 70px 18px;
+  }
+
+  .spots-page-content h1 {
+    font-size: 2.15rem;
+  }
+
+  .spots-page-content p {
+    font-size: 0.98rem;
+  }
+
+  .spots-feature-section {
+    padding: 48px 16px 58px;
+  }
+
+  .spot-showcase-grid {
+    gap: 24px;
+  }
+
+  .spot-showcase-img {
+    height: 220px;
+  }
+
+  .spot-showcase-body {
+    padding: 22px 18px 24px;
+  }
+
+  .spot-showcase-body h3 {
+    font-size: 1.3rem;
+  }
+
+  .spot-showcase-body p {
+    font-size: 0.95rem;
+  }
+
+  .spot-quick-info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
